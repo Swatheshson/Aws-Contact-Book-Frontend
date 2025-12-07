@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   title = "contact-app"
-   constructor(private http:HttpClient) {}
+   constructor(private contact:ContactService) {}
    
   //initial value
   display:boolean = false;
@@ -24,7 +25,15 @@ export class App {
   change(){
     this.display = true;
   }
+
+
   add(){
-    //should pass to the backend
+    const userdata = {
+      name:this.name,
+      phone:this.numbervariable
+    }
+
+    //from here make call to service file.
+    
   }
 }

@@ -6,4 +6,7 @@ import { Injectable } from '@angular/core';
 export class ContactService {
 
   constructor() { }
+
+  //method should be here
+  
 }
