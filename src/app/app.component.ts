@@ -34,6 +34,9 @@ export class App {
     }
 
     //from here make call to service file.
+    this.contact.addContact(userdata){
+
+    }
     
   }
 }
